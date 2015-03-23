@@ -18,7 +18,7 @@ then
   git remote add origin $repo
   git fetch origin
   git checkout $git_hash
-  sbt/sbt clean assembly
+  sbt/sbt -Dscala-2.11="1" clean assembly
   sbt/sbt publish-local
   popd > /dev/null
 
